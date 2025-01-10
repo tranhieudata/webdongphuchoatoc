@@ -1,0 +1,24 @@
+Sản phẩm Gồm có:
+- Tên sản phẩm : name
+- Giá sản phẩm : price
+- Danh mục sản Phẩm : category
+- Mô tả: description
+
+Bảng:
+product
+- productId
+- name
+- price
+- description
+category
+- categoryId1
+- name
+1 sản phẩm thì có nhiều danh mục
+1 danh mục cũng có nhiều sản phẩm
+quan hệ nhiều nhiều
+new
+- title
+- description
+- acthor
+- date
+- image

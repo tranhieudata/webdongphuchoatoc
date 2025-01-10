@@ -1,0 +1,97 @@
+.collection-page{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto; /* Chiều cao cố định cho ảnh */
+    object-fit: cover; /* Cắt ảnh sao cho phủ đầy không gian mà không bị méo */
+    border-radius: 8px;
+  }
+.product-item {
+    margin: 10px;
+}
+.left-column {
+    margin-top: 20px;
+}
+.right-column{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.left-column-title {
+    background-color:#0E7A61 ;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    color:white;
+    padding: 5px;
+    font-weight: bold;
+}
+ul li a{
+    text-decoration: none; /* Bỏ gạch chân */
+    color: rgb(102, 102, 102);
+    font-weight: bold;
+
+    
+}
+ul li a:hover {
+    color: rgb(255, 0, 0);
+}
+/* Màn hình rộng (desktop và tablet lớn) */
+.cotact-box {
+    margin-top: 100px;
+    border: 2px solid #0E7A61;
+    border-radius: 8px;
+}
+
+  
+  /* Định dạng container cho mỗi mục */
+  .cotact-box-container {
+    display: grid;
+    grid-template-columns: 50px 1fr; /* Hai cột: Ảnh + số điện thoại */
+    gap: 15px; /* Khoảng cách giữa ảnh và số điện thoại */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    margin-top: 10px;
+    
+  }
+  .cotact-box-container div p{
+    word-wrap: break-word;
+  }
+  /* Định dạng hình ảnh, tạo thành hình tròn */
+  .cotact-box-img {
+    width: 60px;    
+    height: 60px;     
+    border-radius: 50%; /* Tạo hình tròn */
+    object-fit: cover;  /* Cắt ảnh cho vừa vặn với khung */
+    margin-right: 15px; /* Khoảng cách giữa ảnh và số điện thoại */
+  }
+  
+  /* Định dạng số điện thoại */
+
+  
+@media screen and (min-width: 769px) {
+    .collection-page{
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+    .product-grid{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+  }
+  
+  /* Màn hình vừa (tablet và mobile nhỏ) */
+@media screen and (max-width: 768px) {
+    .product-grid{
+        display: grid;
+        grid-template-columns: 33% 33% 34%;
+    }
+}
+
+/* Màn hình nhỏ (mobile) */
+@media screen and (max-width: 480px) {
+    .product-grid{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}

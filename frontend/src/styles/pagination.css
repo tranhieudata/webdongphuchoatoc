@@ -1,0 +1,36 @@
+/* pagination.css */
+
+.admin-right-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0px 20px;
+  }
+  
+  .admin-right-pagination button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #007bff;
+    transition: background-color 0.3s;
+  }
+  
+  .admin-right-pagination button:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .admin-right-pagination button:disabled {
+    cursor: not-allowed;
+    background-color: #e9ecef;
+    color: #6c757d;
+  }
+  
+  .admin-right-pagination button.active {
+    background-color: #007bff;
+    color: white;
+  }
+  

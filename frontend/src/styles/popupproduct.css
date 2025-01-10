@@ -1,0 +1,68 @@
+/* Tạo hiệu ứng làm mờ nền */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Làm nền tối và mờ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Đảm bảo popup hiển thị trên các phần tử khác */
+    
+}
+
+/* Phần nội dung của modal */
+.modal-content {
+background-color: white;
+padding: 20px;
+border-radius: 8px;
+width: 800px;
+min-height: 400px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+z-index: 1001; /* Đảm bảo nội dung popup hiển thị trên nền */
+}
+.close-content {
+    background-color: chocolate;
+    width: 50px;
+    text-align: center;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    padding-top: 5px;
+}
+.close-content:hover{
+    background-color: rgb(255, 106, 0);
+}
+/* add */
+.add-product{
+    height: 600px;
+    overflow-y: scroll;
+}
+/* EDIT */
+
+.popup-detail-product{
+    height: 600px;
+    overflow-y: scroll;
+}
+.detail-product-title{
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+}
+.detail-product-input{
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+.detail-product-description{
+    width: 100%;
+    min-height: 200px;
+    margin: 5px 0 5px 0;
+}
+.detail-product-price{
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+.detail-product-button{
+    margin: 5px 0 5px 0;
+ }

@@ -1,0 +1,161 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/styles/navbar.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+/* Các kiểu cho Navbar */
+.overnavbar{
+    background-color: #0E7A61;
+    min-width: 10px;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    text-align: center;
+}
+.overnavbar-login{
+    text-decoration: none; /* Bỏ gạch chân */
+    color: #ffffff !important;
+}
+
+.navbar-custom {
+background-color: #ffffff !important; /* Màu nền navbar */
+
+}
+/* Đổi màu chữ trong navbar thành đen */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgb(56, 56, 56) !important; /* Màu chữ của các liên kết */
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.navbar-custom .navbar-nav .dropdown-toggle {
+    color: rgb(56, 56, 56) !important; /* Màu chữ của các liên kết */
+    font-weight: bold;
+    
+}
+
+/* Màu chữ cho các item trong dropdown */
+.navbar-custom .dropdown-content .dropdown-item {
+    color: rgb(56, 56, 56) !important; /* Màu chữ của các liên kết */
+    font-weight: bold;
+}
+/* Loại bỏ dấu chấm (bullet points) của danh sách */
+ul {
+list-style-type: none;
+padding: 0;  /* Xóa bỏ khoảng cách mặc định */
+margin: 0;   /* Xóa bỏ margin nếu có */
+}
+
+li {
+    padding: 5px 0; /* Tùy chọn, có thể thêm padding cho các phần tử li */
+}
+/* Định dạng cho nút dropdown */
+.dropbtn {
+
+color: rgb(0, 0, 0); /* Màu chữ */
+/* padding: 16px; */
+font-size: 16px;
+border: none;
+cursor: pointer;
+}
+
+/* Định dạng cho các nội dung của menu */
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+/* Ẩn nội dung của dropdown khi không hover */
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+z-index: 1;
+}
+
+/* Định dạng cho các liên kết trong dropdown */
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+/* Hiện dropdown khi hover vào button */
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+/* Đổi màu khi hover vào item trong dropdown */
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+
+
+
+/* Ẩn menu ban đầu trên mobile */
+.mobilenav {
+list-style: none;
+padding: 0;
+margin: 0;
+display: none; /* Menu ẩn mặc định */
+position: absolute;
+top: 50px;
+left: 0;
+width: 100%;
+background-color: #333;
+}
+
+.mobilenav li {
+padding: 10px;
+border-bottom: 1px solid #fff;
+text-align: center;
+color: white;
+}
+
+.mobilenav li:hover {
+background-color: #444;
+}
+
+/* Khi menu mở, hiển thị */
+.mobilenav.open {
+display: block; /* Hiển thị menu khi toggle */
+}
+
+/* Định dạng nút hamburger */
+.mobilenav-toggle {
+background-color: #333;
+color: white;
+border: none;
+font-size: 30px;
+cursor: pointer;
+display: block;
+}
+
+/* Hiển thị nút hamburger trên màn hình nhỏ */
+@media screen and (max-width: 768px) {
+    .mobilenav-toggle {
+        display: block; /* Hiển thị nút hamburger trên mobile */
+    }
+
+    .mobilenav {
+        display: none; /* Ẩn menu ban đầu trên mobile */
+    }
+
+    .mobilenav.open {
+        display: block; /* Hiển thị menu khi đã toggle */
+    }
+    .overnavbar{
+        display: none;
+    }
+}
+@media screen and (min-width: 769px) {
+.mobilenav-toggle {
+    display: none; /* Ẩn nút hamburger trên màn hình rộng (laptop, desktop) */
+}
+
+.mobilenav {
+    display: none; /* Hiển thị menu dạng thanh ngang trên màn hình rộng */
+}
+}
+

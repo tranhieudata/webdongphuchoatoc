@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+body {
+    min-height: 100px; /* Tạo chiều dài lớn để có thể cuộn */
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+/* Đặt phần tử cố định dưới cùng với Flexbox */
+.fixed-bottom-box {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Canh giữa các phần tử con */
+    align-items: center; /* Canh giữa theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa các phần tử con */
+    padding: 10px 20px;
+    box-sizing: border-box;
+    z-index: 1000; /* Đảm bảo nó hiển thị trên các phần tử khác */
+    background-color: #0E7A61;
+  }
+  
+  /* Hình ảnh Zalo */
+  .fixed-bottom-image {
+    height: 50px; /* Kích thước hình ảnh Zalo */
+    width: auto;
+    cursor: pointer; /* Thêm hiệu ứng con trỏ khi di chuột */
+    padding-right: 5px;
+  }
+  
+  /* Hình ảnh Hotline */
+  .fixed-bottom-left {
+    height: 50px; /* Kích thước hình ảnh Hotline */
+    width: auto;
+    cursor: pointer; /* Thêm hiệu ứng con trỏ khi di chuột */
+    padding-left: 5px;
+  }
+  .breadcrumb-item a {
+    text-decoration: none; /* Removes underline */
+    color: #007bff; /* Change this to the color you prefer */
+  }
+  
+  /* Optional: Change the color of active breadcrumb (current page) */
+  .breadcrumb-item-fix {
+    color: #6c757d; /* For example, a gray color */
+  }

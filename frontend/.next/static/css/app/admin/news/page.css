@@ -1,0 +1,309 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/styles/editor.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+.controls {
+    display: flex;
+    border: 1px solid #ccc;
+    border-top: 0;
+    padding: 10px;
+  }
+  
+  .controls-right {
+    margin-left: auto;
+  }
+  
+  .state {
+    margin: 10px 0;
+    font-family: monospace;
+  }
+  
+  .state-title {
+    color: #999;
+    text-transform: uppercase;
+  }
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/styles/admin.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+.container-admin {
+    display: grid;
+    grid-template-columns: 13% 87%;
+}
+.admin-left {
+    /* background-color: aquamarine; */
+    background-image: linear-gradient(#f869d5 , #5650de);
+    min-height: 700px;
+    padding-top: 10px;
+    border-radius: 10px 0 0 10px;
+}
+.admin-left div {
+    color: white;
+    font-weight: bold;
+    padding: 10px 0 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.admin-left div:hover{
+    background-color: #aeaeae;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.admin-left-button a {
+    text-decoration: none;
+    color: white;
+  }
+.admin-left-button a:hover{
+
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+}
+.admin-right {
+    background-color: rgb(211, 211, 211);
+    
+}
+.fixed-bottom-box{
+    display: none;
+}
+/* right content */
+.admin-right {
+    padding:0 10px 0 10px;
+}
+.admin-right-header {
+    display: flex;
+    justify-content: space-between; /* Phân bố không gian giữa các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin: 20px 0;
+  }
+  
+  .admin-right-new-button {
+    padding: 10px 20px;
+    background-color: #ff8000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .admin-right-new-button:hover {
+    background-color: #ffb004;
+  }
+  
+  .search-form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+    margin-right: 10px;
+  }
+  
+  .search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .search-results {
+    margin-top: 20px;
+  }
+  
+  .search-results ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .search-results li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+  }
+/* content */
+
+.content-header {
+    display: grid;
+    grid-template-columns: 5% 20% 65% 10%;
+}
+.content-header div{
+    background-color: #6c6c6c;
+    padding: 5px 5px 5px 5px;
+    font-weight: bold;
+}
+.content-box {
+    display: grid;
+    grid-template-columns: 5% 20% 65% 10%;
+    background-color: #a9a9a9;
+    margin: 5px 0 5px 0;
+    padding-left: 5px;
+}
+
+.item-header-option {
+    display: flex;
+}
+.item-option-left {
+    background-color: rgb(4, 84, 4);
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    border-radius: 3px;
+
+}
+.item-option-right {
+    background-color: rgb(255, 119, 0);
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    border-radius: 3px;
+
+}
+.item-option-right:hover {
+    background-color: rgb(121, 57, 0);
+    cursor: pointer;
+}
+.item-option-left:hover {
+    background-color: rgb(1, 146, 1);
+    cursor: pointer;
+
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Làm nền tối và mờ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Đảm bảo popup hiển thị trên các phần tử khác */
+  }
+.add-product{
+  height: 600px;
+  overflow-y: scroll;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/styles/popupproduct.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************/
+/* Tạo hiệu ứng làm mờ nền */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Làm nền tối và mờ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Đảm bảo popup hiển thị trên các phần tử khác */
+    
+}
+
+/* Phần nội dung của modal */
+.modal-content {
+background-color: white;
+padding: 20px;
+border-radius: 8px;
+width: 800px;
+min-height: 400px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+z-index: 1001; /* Đảm bảo nội dung popup hiển thị trên nền */
+}
+.close-content {
+    background-color: chocolate;
+    width: 50px;
+    text-align: center;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    padding-top: 5px;
+}
+.close-content:hover{
+    background-color: rgb(255, 106, 0);
+}
+/* add */
+.add-product{
+    height: 600px;
+    overflow-y: scroll;
+}
+/* EDIT */
+
+.popup-detail-product{
+    height: 600px;
+    overflow-y: scroll;
+}
+.detail-product-title{
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+}
+.detail-product-input{
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+.detail-product-description{
+    width: 100%;
+    min-height: 200px;
+    margin: 5px 0 5px 0;
+}
+.detail-product-price{
+    width: 100%;
+    margin: 5px 0 5px 0;
+}
+.detail-product-button{
+    margin: 5px 0 5px 0;
+ }
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/styles/pagination.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+/* pagination.css */
+
+.admin-right-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0px 20px;
+  }
+  
+  .admin-right-pagination button {
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #007bff;
+    transition: background-color 0.3s;
+  }
+  
+  .admin-right-pagination button:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .admin-right-pagination button:disabled {
+    cursor: not-allowed;
+    background-color: #e9ecef;
+    color: #6c757d;
+  }
+  
+  .admin-right-pagination button.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
