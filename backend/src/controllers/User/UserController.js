@@ -1,8 +1,6 @@
-import mongoose from "mongoose";
-import { User } from "../../models/user.js";
+import { User as UserModel } from "../../models/user.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-const UserModel = mongoose.model("User",User)
 class UserController {
     async createUser(req, res) {
       try {

@@ -19,7 +19,7 @@ AuthRoute.post(
     }
 
     // Xử lý đăng nhập
-    await authController.login;
+    await authController.login(req, res);
   }
 );
 

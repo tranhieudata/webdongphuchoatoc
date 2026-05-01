@@ -32,7 +32,31 @@ const productSchema = new mongoose.Schema({
         type: String,
         unique: true,
         required: false
-      }
+      },
+      metaTitle: {
+        type: String,
+        trim: true,
+        maxLength: 70,
+      },
+      metaDescription: {
+        type: String,
+        trim: true,
+        maxLength: 160,
+      },
+      excerpt: {
+        type: String,
+        trim: true,
+        maxLength: 300,
+      },
+      tags: [{
+        type: String,
+        trim: true,
+      }],
+      status: {
+        type: String,
+        enum: ['active', 'inactive'],
+        default: 'active',
+      },
 })
 
 productSchema.pre('save', async function(next) {

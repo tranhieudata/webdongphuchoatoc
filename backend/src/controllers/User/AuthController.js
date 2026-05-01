@@ -23,8 +23,8 @@ class AuthController {
       // Tạo token
       const token = jwt.sign(
         { id: user._id, username: user.username, role: user.role },
-        process.env.JWT_SECRET,
-        { expiresIn: '1h' }  // Token hết hạn sau 1 giờ
+        process.env.JWT_SECRET_KEY,
+        { expiresIn: '24h' }  // Token hết hạn sau 24 giờ
       );
 
       return res.status(200).json({ message: 'Login successful', token });

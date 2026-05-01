@@ -3,6 +3,8 @@ import Link from 'next/link';
 import "../../styles/navbar.css";
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
+
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [categories, setCategories] = useState(null)
@@ -14,7 +16,7 @@ const Navbar = () => {
     useEffect(()=>{
         const fetchCategories = async () => {
             try {
-              const res = await axios.get('http://localhost:3030/api/category/all'); // Gọi API bằng axios
+              const res = await axios.get(`${API}/api/category/all`); // Gọi API bằng axios
               setCategories(res.data); // Lưu dữ liệu trả về vào state
             } catch (error) {
               console.error('Error fetching categories:', error);
@@ -22,7 +24,7 @@ const Navbar = () => {
           };
         const fetchTags = async () => {
         try {
-            const res = await axios.get('http://localhost:3030/api/tag/all'); // Gọi API bằng axios
+            const res = await axios.get(`${API}/api/tag/all`); // Gọi API bằng axios
             setTags(res.data); // Lưu dữ liệu trả về vào state
         } catch (error) {
             console.error('Error fetching tags:', error);
@@ -37,7 +39,7 @@ const Navbar = () => {
     <>
     <div className='overnavbar'>
         <div className='overnavbar-item'>
-            Hotline HN: 0969.468.988 – HCM: 0335003416 | CHÚNG TÔI MANG CHẤT LƯỢNG ĐẾN BẠN, NHANH CHÓNG VÀ HOÀN HẢO | Làm việc: T2 – CN , 24/7
+            Hotline HN: 0335.003.416 – HCM: 0335.003.416 | CHÚNG TÔI MANG CHẤT LƯỢNG ĐẾN BẠN, NHANH CHÓNG VÀ HOÀN HẢO | Làm việc: T2 – CN , 24/7
         </div>
         <div className='overnavbar-item'><Link href="/login" className='overnavbar-login'>Tài Khoản</Link></div>
 

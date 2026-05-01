@@ -1,0 +1,62 @@
+﻿.categories-section {
+  padding: 60px 0;
+  background: #f8faf8;
+}
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.cat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #e8f0e8;
+  border-radius: 10px;
+  padding: 20px 18px;
+  transition: all 0.25s;
+  text-decoration: none;
+  color: inherit;
+}
+.cat-card:hover {
+  border-color: #009944;
+  box-shadow: 0 4px 16px rgba(0,153,68,0.1);
+  transform: translateY(-2px);
+  color: inherit;
+}
+.cat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+.cat-info { flex: 1; }
+.cat-info h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 3px;
+}
+.cat-info span {
+  font-size: 12px;
+  color: #888;
+}
+.cat-arrow {
+  font-size: 22px;
+  font-weight: 300;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.cat-card:hover .cat-arrow { transform: translateX(4px); }
+
+@media (max-width: 900px) {
+  .categories-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .categories-grid { grid-template-columns: 1fr; }
+}

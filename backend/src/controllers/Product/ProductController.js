@@ -66,34 +66,49 @@ class ProductController {
         }
   
         const { name, description, price, categoryIds, tagIds } = req.body;
-      
+
+        if (!name || !description || !price) {
+          return res.status(400).json({ message: 'Tên, mô tả và giá sản phẩm là bắt buộc' });
+        }
+        if (!req.files || req.files.length === 0) {
+          return res.status(400).json({ message: 'Vui lòng tải lên ít nhất một ảnh' });
+        }
+
         // Tạo sản phẩm mới với ảnh đã tải lên
-        const imagePaths = req.files.map(file => file.path); // Lấy các đường dẫn ảnh đã tải lên
+        const imagePaths = req.files.map(file => file.path);
   
         const newProduct = new ProductModel({
           name,
           description,
-          price,
-          images: imagePaths, // Lưu mảng các đường dẫn ảnh
+          price: Number(price),
+          images: imagePaths,
+          metaTitle: metaTitle || name,
+          metaDescription: metaDescription || '',
+          excerpt: excerpt || '',
+          tags: tags ? tags.split(',').map(t => t.trim()).filter(Boolean) : [],
+          status: status || 'active',
         });
   
         await newProduct.save();
         
         // Thêm các quan hệ với Category
-        for (const categoryId of categoryIds.split(',')) {
-          
-          await ProductCategoryModel.create({
-            productId: newProduct._id,
-            categoryId: categoryId,
-          });
+        if (categoryIds) {
+          for (const categoryId of categoryIds.split(',').filter(Boolean)) {
+            await ProductCategoryModel.create({
+              productId: newProduct._id,
+              categoryId: categoryId,
+            });
+          }
         }
   
         // Thêm các quan hệ với Tag
-        for (const tagId of tagIds.split(',')) {
-          await ProductTagModel.create({
-            productId: newProduct._id,
-            tagId: tagId,
-          });
+        if (tagIds) {
+          for (const tagId of tagIds.split(',').filter(Boolean)) {
+            await ProductTagModel.create({
+              productId: newProduct._id,
+              tagId: tagId,
+            });
+          }
         }
   
         return res.status(201).json({
@@ -262,17 +277,23 @@ async getProductsByCategory(req, res) {
   
   async getProductById(req, res) {
     try {
+      const { id } = req.params;
+
+      // Validate ObjectId format
+      if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(400).json({ message: 'ID sản phẩm không hợp lệ' });
+      }
 
       // Lấy sản phẩm
-      const product = await ProductModel.findById(req.params.id);
+      const product = await ProductModel.findById(id);
 
       if (!product) {
         return res.status(404).json({ message: 'Product not found' });
       }
 
       // Lấy danh mục của sản phẩm từ bảng ProductCategory
-      const categories = await ProductCategoryModel.find({ productId: req.params.id }).populate('categoryId');
-      const tags = await ProductTagModel.find({ productId: req.params.id }).populate('tagId');
+      const categories = await ProductCategoryModel.find({ productId: id }).populate('categoryId');
+      const tags = await ProductTagModel.find({ productId: id }).populate('tagId');
       return res.status(200).json({
         product,
         categories,

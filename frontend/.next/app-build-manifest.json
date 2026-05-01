@@ -9,25 +9,158 @@
     "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/not-found.css",
       "static/chunks/app/not-found.js"
-    ],
-    "/admin/news/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/admin/news/page.css",
-      "static/chunks/app/admin/news/page.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
     ],
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/page.css",
       "static/chunks/app/page.js"
+    ],
+    "/bang-size/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/bang-size/page.css",
+      "static/chunks/app/bang-size/page.js"
+    ],
+    "/mau-vai/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/mau-vai/page.css",
+      "static/chunks/app/mau-vai/page.js"
+    ],
+    "/gioi-thieu/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/gioi-thieu/page.css",
+      "static/chunks/app/gioi-thieu/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
+    ],
+    "/mau-ao/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/mau-ao/[slug]/page.css",
+      "static/chunks/app/mau-ao/[slug]/page.js"
+    ],
+    "/danh-muc/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/danh-muc/[slug]/page.css",
+      "static/chunks/app/danh-muc/[slug]/page.js"
+    ],
+    "/san-pham/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/san-pham/page.css",
+      "static/chunks/app/san-pham/page.js"
+    ],
+    "/admin/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/admin/layout.css",
+      "static/chunks/app/admin/layout.js"
+    ],
+    "/admin/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/page.js"
+    ],
+    "/admin/dashboard/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/dashboard/page.js"
+    ],
+    "/admin/product/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/product/page.js"
+    ],
+    "/admin/news/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/news/page.js"
+    ],
+    "/admin/category/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/category/page.js"
+    ],
+    "/san-pham/[slug]/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/san-pham/[slug]/[id]/page.css",
+      "static/chunks/app/san-pham/[slug]/[id]/page.js"
+    ],
+    "/tin-tuc/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/tin-tuc/page.css",
+      "static/chunks/app/tin-tuc/page.js"
+    ],
+    "/tin-tuc/[slug]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/tin-tuc/[slug]/page.css",
+      "static/chunks/app/tin-tuc/[slug]/page.js"
+    ],
+    "/lien-he/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/lien-he/page.css",
+      "static/chunks/app/lien-he/page.js"
+    ],
+    "/admin/slug/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/slug/page.js"
+    ],
+    "/admin/size-chart/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/size-chart/page.js"
+    ],
+    "/admin/fabric/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/fabric/page.js"
+    ],
+    "/admin/news/write/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/admin/news/write/page.css",
+      "static/chunks/app/admin/news/write/page.js"
+    ],
+    "/admin/tag/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/tag/page.js"
+    ],
+    "/admin/login/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/admin/login/page.css",
+      "static/chunks/app/admin/login/page.js"
+    ],
+    "/admin/news/edit/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/admin/news/edit/[id]/page.css",
+      "static/chunks/app/admin/news/edit/[id]/page.js"
+    ],
+    "/mau-ao/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/mau-ao/page.css",
+      "static/chunks/app/mau-ao/page.js"
+    ],
+    "/admin/banner/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/banner/page.js"
     ]
   }
 }

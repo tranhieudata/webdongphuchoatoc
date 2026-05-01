@@ -5,6 +5,7 @@ import { useState,useEffect } from "react";
 import axios from "axios";
 import PopupProduct from "./popupproduct";
 import AddOrder from "./addorder";
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 const Product = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [loading, setLoading] = useState(false);
@@ -40,7 +41,7 @@ const Product = () => {
   const loadProducts = async () => {
       if (loading || !hasMore) return;
       try {
-          const res = await axios.get(`http://localhost:3030/api/product/allproduct?page=${page}&limit=${LIMIT}`);
+          const res = await axios.get(`${API}/api/product/allproduct?page=${page}&limit=${LIMIT}`);
           const newProducts = res.data.products;
 
           setLoading(false);
@@ -89,7 +90,7 @@ const Product = () => {
   // xóa sản phẩm
   const deletProduct = async(id)=>{
     try {
-      const res = await axios.delete(`http://localhost:3030/api/product/${id}/delete`);
+      const res = await axios.delete(`${API}/api/product/${id}/delete`);
       setProducts((prevProducts) => prevProducts.filter(product => product._id !== id))
   } catch (error) {
       console.error("Error delete product:", error);

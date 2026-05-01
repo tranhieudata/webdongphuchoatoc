@@ -8,7 +8,7 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 
 const LIMIT = 12;
-
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 const TagPage = (props) => {
     const [products, setProducts] = useState([]);
     const [page, setPage] = useState(1);
@@ -27,8 +27,8 @@ const TagPage = (props) => {
 
         // Nếu có slug (người dùng đang xem danh mục cụ thể)
         const apiUrl = slug 
-            ? `http://localhost:3030/api/product/tag/${slug}/allproduct?page=${page}&limit=${LIMIT}`
-            : `http://localhost:3030/api/product/allproduct?page=${page}&limit=${LIMIT}`; // Lấy tất cả sản phẩm khi không có slug
+            ? `${API}/api/product/tag/${slug}/allproduct?page=${page}&limit=${LIMIT}`
+            : `${API}/api/product/allproduct?page=${page}&limit=${LIMIT}`; // Lấy tất cả sản phẩm khi không có slug
         
         try {
             const res = await axios.get(apiUrl);
@@ -57,7 +57,7 @@ const TagPage = (props) => {
     // Hàm tải danh mục
     const fetchTags = async () => {
         try {
-            const res = await axios.get('http://localhost:3030/api/tag/all');
+            const res = await axios.get(`${API}/api/tag/all`);
             setTags(res.data);
         } catch (error) {
             console.error('Error fetching categories:', error);
@@ -127,7 +127,7 @@ const TagPage = (props) => {
                     {products.map((product) => (
                         <div className="product-item" key={product._id}>
                             {/* Hiển thị ảnh sản phẩm */}
-                            <img src={`http://localhost:3030/${product.images[0]}`} alt={product.name} />
+                            <img src={`${API}/${product.images[0]}`} alt={product.name} />
                             <Link href={`/san-pham/${product.slug}`}>{product.name}</Link>
                         </div>
                     ))}

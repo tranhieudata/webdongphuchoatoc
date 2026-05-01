@@ -1,0 +1,86 @@
+﻿.products-page { padding: 40px 0 60px; }
+.products-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.products-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.products-header p { color: #666; font-size: 15px; }
+
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.filter-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.filter-tag {
+  padding: 8px 18px;
+  border: 1.5px solid #e0e0e0;
+  background: #fff;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-tag:hover { border-color: #009944; color: #009944; }
+.filter-tag.active { background: #009944; border-color: #009944; color: #fff; }
+
+.sort-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+}
+.sort-wrap select {
+  padding: 7px 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+}
+.sort-wrap select:focus { border-color: #009944; }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 1024px) {
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .products-grid { grid-template-columns: repeat(2, 1fr); }
+  .filter-bar { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 400px) {
+  .products-grid { grid-template-columns: 1fr; }
+}
+
+/* Pagination */
+.page-btn {
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: all .2s;
+}
+.page-btn:hover:not(:disabled) { background: #009944; color: #fff; border-color: #009944; }
+.page-btn.active { background: #009944; color: #fff; border-color: #009944; font-weight: 700; }
+.page-btn:disabled { opacity: .4; cursor: not-allowed; }

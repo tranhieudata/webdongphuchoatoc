@@ -1,161 +1,712 @@
-/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/styles/navbar.css ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************/
-/* Các kiểu cho Navbar */
-.overnavbar{
-    background-color: #0E7A61;
-    min-width: 10px;
-    color: #ffffff;
-    display: grid;
-    grid-template-columns: 90% 10%;
-    text-align: center;
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/components/Categories/CategoriesSection.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
+.categories-section {
+  padding: 60px 0;
+  background: #f8faf8;
 }
-.overnavbar-login{
-    text-decoration: none; /* Bỏ gạch chân */
-    color: #ffffff !important;
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+  gap: 16px;
 }
+.cat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #e8f0e8;
+  border-radius: 10px;
+  padding: 20px 18px;
+  transition: all 0.25s;
+  text-decoration: none;
+  color: inherit;
+}
+.cat-card:hover {
+  border-color: #009944;
+  box-shadow: 0 4px 16px rgba(0,153,68,0.1);
+  transform: translateY(-2px);
+  color: inherit;
+}
+.cat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+.cat-info { flex: 1 1; }
+.cat-info h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 3px;
+}
+.cat-info span {
+  font-size: 12px;
+  color: #888;
+}
+.cat-arrow {
+  font-size: 22px;
+  font-weight: 300;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.cat-card:hover .cat-arrow { transform: translateX(4px); }
 
-.navbar-custom {
-background-color: #ffffff !important; /* Màu nền navbar */
-
+@media (max-width: 900px) {
+  .categories-grid { grid-template-columns: repeat(2, 1fr); }
 }
-/* Đổi màu chữ trong navbar thành đen */
-.navbar-custom .navbar-nav .nav-link {
-    color: rgb(56, 56, 56) !important; /* Màu chữ của các liên kết */
-    font-weight: bold;
-    padding-right: 10px;
-}
-
-.navbar-custom .navbar-nav .dropdown-toggle {
-    color: rgb(56, 56, 56) !important; /* Màu chữ của các liên kết */
-    font-weight: bold;
-    
-}
-
-/* Màu chữ cho các item trong dropdown */
-.navbar-custom .dropdown-content .dropdown-item {
-    color: rgb(56, 56, 56) !important; /* Màu chữ của các liên kết */
-    font-weight: bold;
-}
-/* Loại bỏ dấu chấm (bullet points) của danh sách */
-ul {
-list-style-type: none;
-padding: 0;  /* Xóa bỏ khoảng cách mặc định */
-margin: 0;   /* Xóa bỏ margin nếu có */
-}
-
-li {
-    padding: 5px 0; /* Tùy chọn, có thể thêm padding cho các phần tử li */
-}
-/* Định dạng cho nút dropdown */
-.dropbtn {
-
-color: rgb(0, 0, 0); /* Màu chữ */
-/* padding: 16px; */
-font-size: 16px;
-border: none;
-cursor: pointer;
-}
-
-/* Định dạng cho các nội dung của menu */
-.dropdown {
-position: relative;
-display: inline-block;
-}
-
-/* Ẩn nội dung của dropdown khi không hover */
-.dropdown-content {
-display: none;
-position: absolute;
-background-color: #f9f9f9;
-min-width: 160px;
-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-z-index: 1;
+@media (max-width: 500px) {
+  .categories-grid { grid-template-columns: 1fr; }
 }
 
-/* Định dạng cho các liên kết trong dropdown */
-.dropdown-content a {
-color: black;
-padding: 12px 16px;
-text-decoration: none;
-display: block;
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/app/home.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/* Collections Bar */
+.collections-bar {
+  background: #fff;
+  border-bottom: 1px solid #e8f0e8;
+  border-top: 1px solid #e8f0e8;
+}
+.collections-bar-inner {
+  display: flex;
+  align-items: stretch;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.collections-bar-inner::-webkit-scrollbar { display: none; }
+.coll-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+  border-right: 1px solid #e8f0e8;
+  text-decoration: none;
+  transition: all 0.2s;
+  flex: 1 1;
+  justify-content: center;
+}
+.coll-item:last-child { border-right: none; }
+.coll-item:hover { background: #e8f5ee; color: #009944; }
+.coll-icon { font-size: 18px; }
+
+/* About Section */
+.about-section {
+  padding: 72px 0;
+  background: #f8faf8;
+}
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 60px;
+  gap: 60px;
+  align-items: center;
+}
+.video-placeholder {
+  background: linear-gradient(135deg, #009944, #007a35);
+  border-radius: 12px;
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.video-placeholder:hover { opacity: 0.9; }
+.play-btn {
+  width: 64px;
+  height: 64px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+.video-placeholder p {
+  color: rgba(255,255,255,0.9);
+  font-size: 15px;
+  font-weight: 500;
 }
 
-/* Hiện dropdown khi hover vào button */
-.dropdown:hover .dropdown-content {
-display: block;
+.about-tag {
+  display: inline-block;
+  background: #e8f5ee;
+  color: #009944;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+.about-text h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #222;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+.about-text p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.stat-item {
+  text-align: center;
+  padding: 14px 8px;
+  background: #fff;
+  border: 1px solid #e8f0e8;
+  border-radius: 8px;
+}
+.stat-item strong {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #009944;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-item span {
+  font-size: 12px;
+  color: #666;
 }
 
-/* Đổi màu khi hover vào item trong dropdown */
-.dropdown-content a:hover {
-background-color: #ddd;
+/* Clients */
+.clients-section {
+  padding: 60px 0;
+  background: #fff;
+}
+.clients-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.client-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.client-item:hover { border-color: #009944; box-shadow: 0 2px 10px rgba(0,153,68,0.1); }
+.client-logo { font-size: 24px; }
+.client-name { font-size: 14px; font-weight: 600; color: #333; }
+
+/* Benefits */
+.benefits-section {
+  padding: 60px 0;
+  background: #f8faf8;
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  gap: 20px;
+}
+.benefit-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 28px 22px;
+  text-align: center;
+  border: 1px solid #e8f0e8;
+  transition: all 0.25s;
+}
+.benefit-card:hover {
+  border-color: #009944;
+  box-shadow: 0 4px 16px rgba(0,153,68,0.1);
+  transform: translateY(-2px);
+}
+.benefit-icon { font-size: 36px; display: block; margin-bottom: 14px; }
+.benefit-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+.benefit-card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.7;
 }
 
+/* News Preview */
+.news-preview {
+  padding: 60px 0;
+  background: #fff;
+}
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+  gap: 24px;
+}
+.news-item {
+  display: block;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s;
+}
+.news-item:hover { border-color: #009944; box-shadow: 0 4px 16px rgba(0,153,68,0.1); color: inherit; transform: translateY(-2px); }
+.news-img-placeholder {
+  height: 160px;
+  background: linear-gradient(135deg, #e8f5ee, #f0f9f4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+.news-content { padding: 16px; }
+.news-cat {
+  display: inline-block;
+  background: #e8f5ee;
+  color: #009944;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+.news-content h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.news-date { font-size: 12px; color: #999; }
 
-
-/* Ẩn menu ban đầu trên mobile */
-.mobilenav {
-list-style: none;
-padding: 0;
-margin: 0;
-display: none; /* Menu ẩn mặc định */
-position: absolute;
-top: 50px;
-left: 0;
-width: 100%;
-background-color: #333;
+/* Responsive */
+@media (max-width: 1024px) {
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px) {
+  .about-inner { grid-template-columns: 1fr; gap: 32px; }
+  .news-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
+  .collections-bar-inner { justify-content: flex-start; }
+  .coll-item { flex: 0 0 auto; }
+}
+@media (max-width: 600px) {
+  .news-grid { grid-template-columns: 1fr; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .clients-grid { justify-content: flex-start; }
 }
 
-.mobilenav li {
-padding: 10px;
-border-bottom: 1px solid #fff;
-text-align: center;
-color: white;
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/components/Hero/HeroBanner.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.hero-slide {
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  position: relative;
+  background-attachment: fixed;
+}
+.hero-slide.fade-out { opacity: 0; }
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 20px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.hero-text { flex: 1 1; color: #fff; }
+.hero-tag {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  opacity: 0.1;
+}
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.hero-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,0.95);
+}
+.hero-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,0.8);
+  max-width: 480px;
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+.hero-cta {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #fff;
+  color: #009944;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 4px;
+  transition: all 0.25s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.hero-cta:hover {
+  background: #009944;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
-.mobilenav li:hover {
-background-color: #444;
+.hero-visual {
+  display: flex;
+  gap: 16px;
+  flex-shrink: 0;
+}
+.hero-badge {
+  background: rgba(255,255,255,0.15);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 12px;
+  padding: 20px 18px;
+  text-align: center;
+  color: #fff;
+  min-width: 100px;
+}
+.badge-num {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+}
+.badge-text {
+  display: block;
+  font-size: 11px;
+  opacity: 0.85;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Khi menu mở, hiển thị */
-.mobilenav.open {
-display: block; /* Hiển thị menu khi toggle */
+/* Controls */
+.hero-prev, .hero-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.hero-prev { left: 20px; }
+.hero-next { right: 20px; }
+.hero-prev:hover, .hero-next:hover {
+  background: rgba(255,255,255,0.35);
+  transform: translateY(-50%) scale(1.08);
 }
 
-/* Định dạng nút hamburger */
-.mobilenav-toggle {
-background-color: #333;
-color: white;
-border: none;
-font-size: 30px;
-cursor: pointer;
-display: block;
+/* Dots */
+.hero-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 20;
+}
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.hero-dot.active {
+  background: #fff;
+  width: 28px;
+  border-radius: 5px;
 }
 
-/* Hiển thị nút hamburger trên màn hình nhỏ */
-@media screen and (max-width: 768px) {
-    .mobilenav-toggle {
-        display: block; /* Hiển thị nút hamburger trên mobile */
-    }
-
-    .mobilenav {
-        display: none; /* Ẩn menu ban đầu trên mobile */
-    }
-
-    .mobilenav.open {
-        display: block; /* Hiển thị menu khi đã toggle */
-    }
-    .overnavbar{
-        display: none;
-    }
+@media (max-width: 900px) {
+  .hero-visual { display: none; }
+  .hero-title { font-size: 36px; }
 }
-@media screen and (min-width: 769px) {
-.mobilenav-toggle {
-    display: none; /* Ẩn nút hamburger trên màn hình rộng (laptop, desktop) */
+@media (max-width: 600px) {
+  .hero-slide { min-height: 380px; }
+  .hero-content { padding: 40px 16px; }
+  .hero-title { font-size: 26px; }
+  .hero-subtitle { font-size: 16px; }
+  .hero-desc { font-size: 14px; }
+  .hero-cta { padding: 12px 24px; font-size: 14px; }
 }
 
-.mobilenav {
-    display: none; /* Hiển thị menu dạng thanh ngang trên màn hình rộng */
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/components/Products/ProductCard.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
 }
+.product-card:hover {
+  border-color: #009944;
+  box-shadow: 0 8px 24px rgba(0,153,68,0.12);
+  transform: translateY(-3px);
+}
+
+/* Image */
+.product-img-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #f8f8f8;
+  aspect-ratio: 4/3;
+}
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.product-card:hover .product-img { transform: scale(1.06); }
+.product-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  background: linear-gradient(135deg, #f0f9f4, #e8f5ee);
+}
+
+/* Badges */
+.product-badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 4px;
+}
+.badge {
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.badge-new { background: #009944; color: #fff; }
+.badge-sale { background: #f97316; color: #fff; }
+
+/* Hover actions */
+.product-actions {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: all 0.25s;
+}
+.product-card:hover .product-actions {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+.action-btn {
+  width: 38px;
+  height: 38px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.action-btn:hover { background: #009944; color: #fff; }
+
+/* Info */
+.product-info {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1;
+}
+.product-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-decoration: none;
+}
+.product-name:hover { color: #009944; }
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.price-current {
+  font-size: 16px;
+  font-weight: 700;
+  color: #009944;
+}
+.price-original {
+  font-size: 13px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+.product-cta {
+  width: 100%;
+  padding: 9px;
+  background: transparent;
+  border: 1.5px solid #009944;
+  color: #009944;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: auto;
+}
+.product-cta:hover { background: #009944; color: #fff; }
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./src/components/Products/ProductGrid.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+.product-grid-section { padding: 60px 0; }
+.product-grid-section + .product-grid-section { padding-top: 0; }
+
+.grid-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.grid-header .section-header { margin-bottom: 0; text-align: left; }
+.grid-header .section-header h2::after { left: 0; transform: none; }
+
+.view-all-link {
+  color: #009944;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  flex-shrink: 0;
+  margin-bottom: 4px;
+}
+.view-all-link:hover { color: #007a35; text-decoration: underline; }
+
+.product-grid {
+  display: grid;
+  grid-gap: 20px;
+  gap: 20px;
+}
+.product-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+.product-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 1024px) {
+  .product-grid.cols-4 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .product-grid.cols-4,
+  .product-grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+@media (max-width: 480px) {
+  .product-grid.cols-4,
+  .product-grid.cols-3 { grid-template-columns: repeat(2, 1fr); gap: 12px; }
 }
 

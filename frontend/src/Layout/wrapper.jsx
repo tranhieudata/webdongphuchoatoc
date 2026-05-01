@@ -5,6 +5,9 @@ import React, {useEffect,useState} from "react";
 import Footer from "./footers/footer";
 import Navbar from "./Headers/navbar";
 import axios from "axios";
+
+const API = process.env.NEXT_PUBLIC_API_URL ;
+
 const Wrapper = ({ children }) => {
   const [categories, setCategories] = useState([]);
   const [tags, setTags] = useState([]);
@@ -14,7 +17,7 @@ const Wrapper = ({ children }) => {
     }, 500);
     // Fetch categories
     const fetchCategories = async () => {
-      const res = await axios('http://localhost:3030/api/category/all');
+      const res = await axios(`${API}/api/category/all`);
       
 
       setCategories(res.data);
@@ -22,7 +25,7 @@ const Wrapper = ({ children }) => {
     
     // Fetch tags
     const fetchTags = async () => {
-      const res = await axios('http://localhost:3030/api/tag/all');
+      const res = await axios(`${API}/api/tag/all`);
 
       setTags(res.data);
     };

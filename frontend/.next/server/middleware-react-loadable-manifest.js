@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"app\\\\admin\\\\news\\\\_editor.jsx -> react-quill-new\":{\"id\":\"app\\\\admin\\\\news\\\\_editor.jsx -> react-quill-new\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_react-quill-new_lib_index_js.js\"]}}"

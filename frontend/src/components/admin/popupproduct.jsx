@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
-
+const API = process.env.URL_BACKEND || 'http://localhost:5000'; 
 const PopupProduct = ({ productId, isModalOpen, closeModal }) => {
   const [data, setData] = useState(null); // Dữ liệu sản phẩm
   const [loading, setLoading] = useState(true); // Trạng thái tải dữ liệu
@@ -23,9 +23,9 @@ const PopupProduct = ({ productId, isModalOpen, closeModal }) => {
     try {
       setLoading(true);
       const [productRes, categoriesRes, tagsRes] = await Promise.all([
-        axios.get(`http://localhost:3030/api/product/id/${productId}`),
-        axios.get(`http://localhost:3030/api/category/all`),
-        axios.get(`http://localhost:3030/api/tag/all`),
+        axios.get(`${API}/api/product/id/${productId}`),
+        axios.get(`${API}/api/category/all`),
+        axios.get(`${API}/api/tag/all`),
       ]);
 
       setData(productRes.data);
@@ -131,7 +131,7 @@ const PopupProduct = ({ productId, isModalOpen, closeModal }) => {
       }
 
       const res = await axios.put(
-        `http://localhost:3030/api/product/${productId}/edit`,
+        `${API}/api/product/${productId}/edit`,
         formDataToSubmit,
         { withCredentials: true, headers: { 'Content-Type': 'multipart/form-data' } }
       );
@@ -208,7 +208,7 @@ const PopupProduct = ({ productId, isModalOpen, closeModal }) => {
                       />
                     ) : (
                       <img
-                        src={`http://localhost:3030/${image}`}
+                        src={`${API}/${image}`}
                         alt={`Ảnh ${index + 1}`}
                         className="image-thumbnail" style={{width:"100px"}}
                       />

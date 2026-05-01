@@ -1,40 +1,66 @@
 import mongoose from "mongoose";
+import slugify from "slugify";
 
 const newsSchema = new mongoose.Schema({
     title: { type: String, required: true },
     author: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',  // Tham chiếu đến bảng 'User'
+        ref: 'User',
         required: true
     },
     content: { type: String, required: true },
     slug: { 
         type: String, 
-        unique:true,
-        required: true },
+        unique: true,
+        sparse: true
+    },
+    excerpt: {
+        type: String,
+        maxLength: 300
+    },
+    metaDescription: {
+        type: String,
+        maxLength: 200
+    },
+    featuredImage: {
+        type: String
+    },
+    status: {
+        type: String,
+        enum: ['draft', 'published'],
+        default: 'draft'
+    },
+    tags: [{
+        type: String
+    }],
+    views: {
+        type: Number,
+        default: 0
+    }
 }, { timestamps: true });
 
 newsSchema.pre('save', async function(next) {
+    if (this.isModified('title') || this.isNew) {
+        let generatedSlug = slugify(this.title, { 
+            lower: true, 
+            strict: true,
+            locale: 'vi',
+            remove: /[*+~.()'"!:@]/g
+        });
 
+        const existingNews = await mongoose.model('News').findOne({ 
+            slug: generatedSlug,
+            _id: { $ne: this._id }
+        });
 
-    if (this.isModified('name') || this.isNew) {
-        // Tạo slug từ name
-        let generatedSlug = slugify(this.title, { lower: true, strict: true ,locale: 'vi'});
-
-        // Kiểm tra xem slug đã tồn tại trong cơ sở dữ liệu chưa
-        const existingCategory = await mongoose.model('Category').findOne({ slug: generatedSlug });
-        if (existingCategory) {
-            // Nếu slug đã tồn tại, tạo slug mới bằng cách thêm timestamp hoặc số đếm
+        if (existingNews) {
             this.slug = `${generatedSlug}-${Date.now()}`;
         } else {
-            // Nếu slug chưa tồn tại, sử dụng slug gốc
             this.slug = generatedSlug;
         }
     }
-
     next();
 });
 
-
 const NewsModel = mongoose.model('News', newsSchema);
-export {NewsModel};
+export { NewsModel };

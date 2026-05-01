@@ -1,4 +1,7 @@
 {
-  "/admin/news/page": "app/admin/news/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/bang-size/page": "app/bang-size/page.js",
+  "/gioi-thieu/page": "app/gioi-thieu/page.js",
+  "/admin/tag/page": "app/admin/tag/page.js",
+  "/admin/banner/page": "app/admin/banner/page.js"
 }
