@@ -3,7 +3,7 @@ import { ProductRoute } from './productRoutes.js';
 import { UserRoute } from './userRoutes.js';
 import { AuthRoute } from './authRoutes.js';
 import { CategoryRoute } from './categoryRoutes.js';
-import { TagRoute } from './TagRoutes.js';
+import { TagRoute } from './tagRoutes.js';
 import { BannerRoute } from './bannerRoutes.js';
 import { NewsRoute } from './newsRoutes.js';
 import { FabricSampleRoute } from './fabricSampleRoutes.js';
