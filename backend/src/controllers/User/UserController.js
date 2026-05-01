@@ -1,4 +1,4 @@
-import { User as UserModel } from "../../models/user.js";
+import { User as UserModel } from "../../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 class UserController {

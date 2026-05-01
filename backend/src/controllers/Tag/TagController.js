@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { TagModel } from "../../models/tag.js";
+import { TagModel } from "../../models/Tag.js";
 class TagController {
     // Tạo mới thẻ sản phẩm
     async create(req,res) {

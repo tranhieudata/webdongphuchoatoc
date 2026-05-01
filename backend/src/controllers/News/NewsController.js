@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import sanitizeHtml from "sanitize-html"; // làm sạch html tránh các tấn công Cross-Site Scripting (XSS)
-import { News } from "../../models/news.js";
-import { User } from "../../models/user.js";
+import { News } from "../../models/News.js";
+import { User } from "../../models/User.js";
 
 const NewsModel = mongoose.model("News",News)
 const UserModel = mongoose.model("User",User)

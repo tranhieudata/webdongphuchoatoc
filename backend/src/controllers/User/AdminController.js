@@ -2,8 +2,8 @@
 
 import {Banner} from "../../models/Banner.js"
 
-import { User } from "../../models/user.js";
-import { News } from "../../models/news.js";
+import { User } from "../../models/User.js";
+import { News } from "../../models/News.js";
 class AdminController {
   // Cập nhật Banner
   async updateBanner(req, res) {

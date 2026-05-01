@@ -2,8 +2,8 @@ import mongoose from 'mongoose';
 
 //import { Product } from '../../models/product.js';
 import {ProductModel} from '../../models/Product.js'
-import { CategoryModel } from '../../models/category.js';
-import { TagModel } from '../../models/tag.js';
+import { CategoryModel } from '../../models/Category.js';
+import { TagModel } from '../../models/Tag.js';
 import { ProductCategory } from '../../models/ProductCategory.js';
 import { ProductTag } from '../../models/ProductTag.js';
 import multer from 'multer';

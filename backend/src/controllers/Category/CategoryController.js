@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { CategoryModel } from "../../models/category.js";
+import { CategoryModel } from "../../models/Category.js";
 
 class CategoryController {
     // Tạo mới Danh mục sản phẩm
