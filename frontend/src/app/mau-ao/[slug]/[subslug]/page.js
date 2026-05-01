@@ -1,7 +1,7 @@
 
 
 import Wrapper from "@/Layout/wrapper";
-import ProducPage from "@/components/product";
+import ProducPage from "@/components/Products/ProductPage";
 export const metadata = {
   title:"Danh Mục - Đồng Phục Hỏa Tốc" ,
   description:"Chào mừng đến với Đồng Phục Hỏa Tốc - Chuyên cung cấp áo đồng phục bếp, đồng phục nhà hàng, công ty, công sở, áo lớp.",

@@ -2,7 +2,7 @@
 
 import React, {useEffect,useState} from "react";
 // import BackToTop from "../lib/BackToTop";
-import Footer from "./footers/footer";
+import Footer from "./Footers/footer";
 import Navbar from "./Headers/navbar";
 import axios from "axios";
 
